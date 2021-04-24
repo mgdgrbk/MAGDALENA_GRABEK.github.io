@@ -31,7 +31,6 @@ nav a:hover {
     opacity: .85;
 }
 nav img {
-    width: 34px;
     padding: 5px;
     margin: auto 7px;
     cursor: pointer;
@@ -73,7 +72,6 @@ nav button {
     padding: 13px;
     padding-left: 45px;
     border-radius: 25px;
-    width: 100%;
     transition: box-shadow 100ms;
     outline: none;
 }
