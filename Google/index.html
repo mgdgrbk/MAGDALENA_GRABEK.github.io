@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Google</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrapper" v-bind:class="{ results: googleSearch.length > 0}">
     <section>
         <header>
             <ul>
@@ -16,7 +18,7 @@
             </ul>
         </header>
         <div class="main">
-            <img src="google.png">
+            <img src="google.png" class="google">
             <div class="searchBox">
                 <input type="text" class="search">
                 <div class="icons">
@@ -29,24 +31,93 @@
                 <button>Szczęśliwy traf</button>
             </div>
         </div>
-        <div class="footer">
-            <div class="row row1">
-                <p class="country">Polska</p>
-            </div>
-            <div class="row row2">
-                <ul>
-                    <li><a href="#">O nas</a></li>
-                    <li><a href="#">Reklamuj się</a></li>
-                    <li><a href="#">Dla firm</a></li>
-                    <li><a href="#">Jak działa wyszukiwarka</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Prywatność</a></li>
-                    <li><a href="#">Warunki</a></li>
-                    <li><a href="#">Ustawienia</a></li>
-                </ul>
-            </div>
-        </div>
+        </section>
+    </div>
+        
     </section>
 </div>
+
+<div class="results">
+    <ul id="result_buttons">
+        <li id="active_res_btn">Wszystko</li>
+        <li>Grafika</li>
+        <li>Wideo</li>
+        <li>Wiadomości</li>
+        <li>Zakupy</li>
+        <li>Więcej</li>
+        <li>Ustawienia</li>
+        <li>Narzędzia</li>
+    </ul>
+    <hr id = "result_line" />
+    <div class="result">
+        <a>https://www.agh.edu.pl/</a> 
+        <h2>Strona główna AGH</h2>
+        <p>Zapoznaj się z polityką obsługi plików cookies (ciasteczek) w serwisie AGH. Jeśli Państwa</p>
+        <p>przeglądarka nie blokuje takich plików, przesyłanych przez nasz ... </p>
+    </div>
+
+    <div class="result">
+        <a>https://www.facebook.com/AGH.Krakow</a> 
+        <h2>Akademia Górniczo-Hutnicza im. Stanisława Staszica w ...</h2>
+        <p>Stanisława Staszica w Krakowie, AGH (do 1949 Akademia Górnicza w Krakowie)​, nazwa</p>
+        <p>międzynarodowa AGH University of Science and Technology (wcześniej​ ...</p>
+    </div>
+
+    <div class="result">
+        <a>https://pl.wikipedia.org/wiki/Akademia_G%C3%B3rniczo-Hutnicza_im._Stanis%C5%82awa_Staszica_w_Krakowie</a> 
+        <h2>Akademia Górniczo-Hutnicza im. Stanisława Staszica w ...</h2>
+        <p>Stanisława Staszica w Krakowie, AGH (do 1949 Akademia Górnicza w Krakowie)​, nazwa</p>
+        <p>międzynarodowa AGH University of Science and Technology (wcześniej​ ...</p>
+    </div>
+
+    <div class="result">
+        <a>https://krakow.wyborcza.pl/krakow/0,113228.html?tag=AGH</a> 
+        <h2>AGH Kraków - - Kraków.Wyborcza.pl</h2>
+        <p>Ma być tania, łatwa do wymiany, wytrzymała, ruchoma i przede wszystkim spersonalizowana,</p>
+        <p>słowem - proteza przyszłości. Studenci AGH właśnie pracują nad ...</p>
+    </div>
+
+    <div class="result">
+        <a>https://pl.linkedin.com/school/agh-university-of-science-and-technology/</a> 
+        <h2>AGH University of Science and Technology | LinkedIn</h2>
+        <p>AGH University of Science and Technology | 82 658 obserwujących na LinkedIn. Akademia</p>
+        <p>Górniczo-Hutnicza im. Stanisława Staszica w Krakowie to jedna z ...</p>
+    </div>
+
+    <div class="result">
+        <a>https://twitter.com/agh_krakow</a> 
+        <h2>AGH Kraków (@AGH_Krakow) | Twitter</h2>
+        <p>The latest Tweets from AGH Kraków (@AGH_Krakow). Akademia Górniczo-​Hutnicza W</p>
+        <p>Krakowie / AGH University of Science and Technology. Najlepsza ...</p>
+    </div>
+
+    <div class="result">
+        <a>https://www.wydawnictwoagh.pl/</a> 
+        <h2>Wydawnictwo AGH</h2>
+        <p>Serwis Wydawnictwa AGH.</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class="row row1">
+        <p class="country">Polska</p>
+    </div>
+    <div class="row row2">
+        <ul>
+            <li><a href="#">O nas</a></li>
+            <li><a href="#">Reklamuj się</a></li>
+            <li><a href="#">Dla firm</a></li>
+            <li><a href="#">Jak działa wyszukiwarka</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Prywatność</a></li>
+            <li><a href="#">Warunki</a></li>
+            <li><a href="#">Ustawienia</a></li>
+        </ul>
+    </div>
+</div>
+
+   
 </body>
+</html>
