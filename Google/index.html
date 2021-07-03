@@ -32,14 +32,14 @@
                             </div>
                             </div>
                             <div class="cities_list_header">
-                                <hr id="result_line"/>
+                                <hr id="result_line" />
                             </div>
                             <div class="cities_list">
-                                    <!--div v-for="city in filteredCities" :key="city.name"></div>-->
-                                    <!--<span v-html="boldName(city.name, googleSearch)"></span>-->
-                                    <!--div v-if="search" v-for="city in filteredCities.slice(0,10)" :key="city.name">
-                                        {{city.name}}
-                                    </div>-->
+                                <!--<div v-for="city in filteredCities" :key="city.name"></div>-->
+                                <!--<span v-html="boldName(city.name, googleSearch)"></span>-->
+                                <div v-if="search" v-for="city in filteredCities.slice(0,10)" :key="city.name">
+                                    {{city.name}}
+                                </div>
                             </div>
                             <div class="buttons">
                                 <button v-on:click="greet">Szukaj w Google</button>
@@ -175,9 +175,9 @@
             mounted() {
                 window.addEventListener("keypress", function (e) {
                     char = e.toString();
-                    this.googleSearch=this.googleSearch;
+                    this.googleSearch = this.googleSearch;
                     if (this.googleSearch != '')
-                        this.search=true;
+                        this.search = true;
                     if (this.googleSearch == '') {
                         this.search = false;
                     }
@@ -186,7 +186,7 @@
             computed: {
                 filteredCities() {
                     return this.cities.filter((city) => {
-                        return city.name.toLoweCase().includes(this.googleSearch.toLoweCase().toString())
+                        return city.name.toLowerCase().includes(this.googleSearch.toLowerCase().toString())
                     })
                 }
             },
@@ -203,5 +203,6 @@
             }
         });
     </script>
+
 </body>
 </html>

@@ -39,7 +39,7 @@ section header
 section header ul
 {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 
@@ -107,6 +107,7 @@ section .main .searchBox .icons
     padding: 12px 20px;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 
