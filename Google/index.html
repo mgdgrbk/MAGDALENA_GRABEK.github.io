@@ -38,7 +38,7 @@
                                 <!--<div v-for="city in filteredCities" :key="city.name"></div>-->
                                 <!--<span v-html="boldName(city.name, googleSearch)"></span>-->
                                 <div v-if="search" v-for="city in filteredCities.slice(0,10)" :key="city.name">
-                                    {{city.name}}
+                                    <span class="bold" v-html="boldResult(city.name)"></span>
                                 </div>
                             </div>
                             <div class="buttons">
@@ -199,6 +199,15 @@
                     else {
                         alert('Too short input')
                     };
+                },
+
+                boldResult: function (el) {
+                    miasto = el.match(RegExp(this.googleSearch, "gi"));
+                    x2 = '';
+                    miasto.forEach(wynik => {
+                        x2 = el.replace(RegExp(this.googleSearch, "gi"), `<span class="light">${el.match(RegExp(this.googleSearch, "gi"))[0]}</span>`);
+                    })
+                    return x2;
                 }
             }
         });

@@ -188,3 +188,11 @@
     margin-right: 0px;
     margin-left: 25px;
 }
+
+.bold{
+    font-weight:bold;
+}
+
+.light {
+    font-weight:normal;
+}
